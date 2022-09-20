@@ -81,6 +81,8 @@ All the needed variables & prompts for Deforum Stable Diffusion are set in the t
 
 That's it! 
 
+# GUI (in the making)
+
 But wait there is more :)
 I try to make a gui for Deforum Stable Diffusion Local. It's my first repository/fork and I am no real programmer so pls be kind <3
 
