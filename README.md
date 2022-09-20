@@ -2,7 +2,7 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=deforum_sd_local_repo)
 [![Replicate](https://replicate.com/deforum/deforum_stable_diffusion/badge)](https://replicate.com/deforum/deforum_stable_diffusion)
 
-# Deforum Stable Diffusion Local Version
+# Deforum Stable Diffusion Local Version - With GUI (in the making)
 Local version of Deforum Stable Diffusion V0.4, supports txt settings file input and animation features!
 
 - **[Stable Diffusion](https://github.com/CompVis/stable-diffusion) by Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer and the [Stability.ai](https://stability.ai/) Team.**
@@ -80,3 +80,18 @@ All the needed variables & prompts for Deforum Stable Diffusion are set in the t
 
 
 That's it! 
+
+>>>>  But wait there is more :)
+I try to make a gui for Deforum Stable Diffusion Local. It's my first repository/fork and I am no real programmer so pls be kind <3
+
+Import into the gui is working.
+Todo: Exporting back into the text file.
+
+Current status
+![](https://github.com/xtrembug/gifs/blob/main/gui_v1.1.gif)
+
+Have a nice Day!
+
+
+
+
