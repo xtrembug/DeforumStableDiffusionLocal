@@ -81,13 +81,14 @@ All the needed variables & prompts for Deforum Stable Diffusion are set in the t
 
 That's it! 
 
->>>>  But wait there is more :)
+But wait there is more :)
 I try to make a gui for Deforum Stable Diffusion Local. It's my first repository/fork and I am no real programmer so pls be kind <3
 
 Import into the gui is working.
 Todo: Exporting back into the text file.
 
 Current status
+
 ![](https://github.com/xtrembug/gifs/blob/main/gui_v1.1.gif)
 
 Have a nice Day!
