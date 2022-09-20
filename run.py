@@ -8,6 +8,8 @@ import os, time
 def get_output_folder(output_path, batch_folder):
     out_path = os.path.join(output_path,time.strftime('%Y-%m'))
     if batch_folder != "":
+        #batch_folder = batch_folder
+        batch_folder = batch_folder + time.strftime('_%y%m%d_%H%M%S') ## EDIT ##
         out_path = os.path.join(out_path, batch_folder)
     os.makedirs(out_path, exist_ok=True)
     return out_path
@@ -518,7 +520,7 @@ def main():
 
 	load_on_run_all = True #@param {type: 'boolean'}
 	half_precision = True # check
-	check_sha256 = True #@param {type:"boolean"}
+	check_sha256 = False #@param {type:"boolean"}
 
 	model_map = {
 	    "sd-v1-4-full-ema.ckpt": {'sha256': '14749efc0ae8ef0329391ad4436feb781b402f4fece4883c7ad8d10556d8a36a'},
@@ -769,6 +771,8 @@ def main():
 
 	    #@markdown **Sampling Settings**
 	    seed = master_args["seed"] #@param
+	    #seed = random.randint(0, 999999999)
+
 	    sampler = master_args["sampler"] #@param ["klms","dpm2","dpm2_ancestral","heun","euler","euler_ancestral","plms", "ddim"]
 	    steps = master_args["steps"] #@param
 	    scale = master_args["scale"] #@param
@@ -783,7 +787,7 @@ def main():
 
 	    #@markdown **Batch Settings**
 	    n_batch = master_args["n_batch"]  #@param
-	    batch_name = master_args["batch_name"] #@param {type:"string"}
+	    batch_name = master_args["batch_name"]  #@param {type:"string"} 
 	    filename_format = master_args["filename_format"] #@param ["{timestring}_{index}_{seed}.png","{timestring}_{index}_{prompt}.png"]
 	    seed_behavior = master_args["seed_behavior"] #@param ["iter","fixed","random"]
 	    make_grid = False #@param {type:"boolean"}

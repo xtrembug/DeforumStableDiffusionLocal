@@ -132,3 +132,15 @@ dmypy.json
 # Model file
 *.ckpt
 *.pt
+
+output/
+input/
+examples/
+.gitignore
+AdaBins/
+MiDaS/
+pytorch3d-lite/
+src/
+stable-diffusion/
+k-diffusion/
+run.py
