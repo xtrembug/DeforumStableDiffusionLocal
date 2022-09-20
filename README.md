@@ -89,7 +89,7 @@ Todo: Exporting back into the text file.
 
 Current status
 
-![](https://github.com/xtrembug/gifs/blob/main/gui_v1.1.gif)
+![](https://github.com/xtrembug/gifs/blob/main/gui.gif)
 
 Have a nice Day!
 
