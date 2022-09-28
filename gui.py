@@ -517,42 +517,19 @@ class DeforumGuiApp:
 
 
     def bt_save_click(self):
-        
-        if len(self.anim_promts_keys) >= 5:
-            dic_anim_promt = {
-                self.en_frame1.get():self.txt_prompt1.get(),
-                self.en_frame2.get():self.txt_prompt2.get(),
-                self.en_frame3.get():self.txt_prompt3.get(),
-                self.en_frame4.get():self.txt_prompt4.get(),
-                self.en_frame5.get():self.txt_prompt5.get()
-            }
 
-        if len(self.anim_promts_keys) >= 4:
-            dic_anim_promt = {
-                self.en_frame1.get():self.txt_prompt1.get(),
-                self.en_frame2.get():self.txt_prompt2.get(),
-                self.en_frame3.get():self.txt_prompt3.get(),
-                self.en_frame4.get():self.txt_prompt4.get()
-            }
+        dic_anim_promt = {}
+        if len(self.en_frame1.get()) != 0:
+            dic_anim_promt[self.en_frame1.get()] = self.txt_prompt1.get("1.0",'end-1c')
+        if len(self.en_frame2.get()) != 0:
+            dic_anim_promt[self.en_frame2.get()] = self.txt_prompt2.get("1.0",'end-1c')      
+        if len(self.en_frame3.get()) != 0:
+            dic_anim_promt[self.en_frame3.get()] = self.txt_prompt3.get("1.0",'end-1c')
+        if len(self.en_frame4.get()) != 0:
+            dic_anim_promt[self.en_frame4.get()] = self.txt_prompt4.get("1.0",'end-1c')
+        if len(self.en_frame5.get()) != 0:
+            dic_anim_promt[self.en_frame5.get()] = self.txt_prompt5.get("1.0",'end-1c')
 
-        if len(self.anim_promts_keys) >= 3:
-            dic_anim_promt = {
-                self.en_frame1.get():self.txt_prompt1.get(),
-                self.en_frame2.get():self.txt_prompt2.get(),
-                self.en_frame3.get():self.txt_prompt3.get()
-            }
-
-        if len(self.anim_promts_keys) >= 2:
-            dic_anim_promt = {
-                self.en_frame1.get():self.txt_prompt1.get(),
-                self.en_frame2.get():self.txt_prompt2.get()
-            }
-
-        if len(self.anim_promts_keys) >= 1:
-            dic_anim_promt = {
-                self.en_frame1.get():self.txt_prompt1.get()
-            }
-        
         dictionary = {
             "batch_name":self.en_batchname.get(),
             "n_batch":self.en_nbatch.get(),
@@ -606,9 +583,9 @@ class DeforumGuiApp:
             "resume_timestring":self.en_restimestring.get()
         }
 
-        print(dictionary)
-        #with open(DeforumGuiApp.filename_load, "w") as outfile:
-           # outfile.write()
+        with open(DeforumGuiApp.filename_load, "w") as outfile:
+            json.dump(dictionary, outfile, default=lambda o: o.__dict__, separators=(',', ':'), indent=4)
+
 
     def bt_info_click(self):
         pass
