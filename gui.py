@@ -369,7 +369,7 @@ class DeforumGuiApp:
 
 
     def bt_loadimage_click(self):
-        DeforumGuiApp.filename_image = filedialog.askopenfilename(initialdir=path, title="Select source image", filetypes=(("jpg files", "jpg"),("png files", "png"),))
+        DeforumGuiApp.filename_image = filedialog.askopenfilename(initialdir=path, title="Select source image", filetypes=[("image files", "*.jpg *.png")])
         
         rel_path_filename = os.path.abspath(DeforumGuiApp.filename_image)
         rel_path_image = os.path.relpath(rel_path_filename, path)
@@ -380,7 +380,7 @@ class DeforumGuiApp:
 
 
     def bt_load_click(self):
-        DeforumGuiApp.filename_load = filedialog.askopenfilename(initialdir=path, title="Select config file", filetypes=(("txt files", "txt"),))
+        DeforumGuiApp.filename_load = filedialog.askopenfilename(initialdir=path, title="Select config file", filetypes=[("text files", "*.txt")])
 
         with open(DeforumGuiApp.filename_load) as f:
             json_data = json.load(f)
